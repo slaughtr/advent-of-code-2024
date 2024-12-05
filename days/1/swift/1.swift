@@ -48,7 +48,6 @@ var occurences: [Int: Int] = Dictionary(minimumCapacity: 10000)
 var partTwoTotal: Int = 0
 
 for left in leftCol {
-    // print("left: \(left), current: \(current), next: \(next)")
     occurences.updateValue(0, forKey: left)
     for right in rightCol {
         if right == left {
