@@ -9,8 +9,9 @@ func parseInput(fromFile file: String) -> ([Int], [Int]) {
     var rightCol: [Int] = []
 
     do {
-        let contents: String = try String(contentsOfFile: file)
+        let contents: String = try String(contentsOfFile: file, encoding: .utf8)
         let lines = contents.components(separatedBy: .newlines)
+        // 0
 
         for line in lines {
             // 3 spaces separates left and right col in the input
